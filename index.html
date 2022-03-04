@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="dscription" content="Frontend chat messenger with background">
+   <meta name="author" content="Enas Hamdy">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Chat messenger with background</title>
+
+   <!-- Link to CSS stylesheet -->
+   <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+   <!-- chat-app-container => The main chat app window -->
+   <div class="chat-app-container">
+
+      <!-- contacts-list class of the whole contacts list -->
+      <div class="contacts-list">
+         <!-- search-contact-box class of the search textbox in the contacts list-->
+         <div class="search-contact-box">
+            <input type="text" name="search-contact" placeholder="Search">
+            <img src="../images/editing-write-icon.png" alt="">
+         </div>
+
+         <!-- contact-class of each contact alone -->
+
+         <!-- Contact 1 -->
+         <div class="contact-class">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/man-1.jpg">
+            <!-- contact-data class contains the contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Thomas Bangalter</div>
+               <div class="contact-last-msg">I was wondering</div>
+            </div>
+            <!-- last-converse-time class of the last conversation time -->
+            <div class="last-converse-time">2:09 PM</div>
+         </div>
+
+         <!-- Contact 2 -->
+         <div class="contact-class">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/dog.png" width="50px" height="50px">
+            <!-- Contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Dog Woofson</div>
+               <div class="contact-last-msg">I've forgotten how it felt b</div>
+            </div>
+            <!-- The time of the last conversation -->
+            <div class="last-converse-time">1:44 PM</div>
+         </div>
+
+         <!-- Contact 3 -->
+         <div class="contact-class">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/man-2.jpg" width="50px" height="50px">
+            <!-- Contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Louis CK</div>
+               <div class="contact-last-msg">But we're probably gonna</div>
+            </div>
+            <!-- The time of the last conversation -->
+            <div class="last-converse-time">2:09 PM</div>
+         </div>
+
+         <!-- Contact 4 -->
+         <div class="contact-class">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/man-4a.jpg" width="50px" height="50px">
+            <!-- Contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Bo Jackson</div>
+               <div class="contact-last-msg">It's not that bad</div>
+            </div>
+            <!-- The time of the last conversation -->
+            <div class="last-converse-time">2:09 PM</div>
+         </div>
+
+         <!-- Contact 5 -->
+         <div class="contact-class">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/man-3.png" width="50px" height="50px">
+            <!-- Contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Michael Jordan</div>
+               <div class="contact-last-msg">Wasup for the third time li</div>
+            </div>
+            <!-- The time of the last conversation -->
+            <div class="last-converse-time">2:09 PM</div>
+         </div>
+
+         <!-- Contact 6 -->
+         <div class="contact-class clicked-contact">
+            <!-- Contact image -->
+            <img class="contact-image" src="/images/man-5a.jpg" width="50px" height="50px">
+            <!-- Contact details -->
+            <div class="contact-data">
+               <div class="contact-name">Drake</div>
+               <div class="contact-last-msg clicked-contact">howdoyoudoaspace</div>
+            </div>
+            <!-- The time of the last conversation -->
+            <div class="last-converse-time clicked-contact">2:09 PM</div>
+         </div>
+      </div>
+
+      <!-- Chat Room -->
+      <div class="chat-room">
+         <!-- The address of the chat room  To:Contact name -->
+         <div class="to-div">
+            <div class="to-class">To:</div>
+            <!-- to-name class => the name of the chosen contact -->
+            <div class="to-name">Drake</div>
+         </div>
+
+         <!-- The chat messages with a chosen contact -->
+         <div class="messages-div">
+            <!-- The messages area
+               contact-message class of the chosen contact
+               chat-owner class of the owner of the chat app -->
+            <div class="contact-message">So, how's your new phone?</div>
+            <div class="contact-message">You finally have a smartphone :D</div>
+            <div class="chat-owner">Drake?</div>
+            <div class="chat-owner">Why aren't you answering?</div>
+            <div class="contact-message">howdoyoudoaspace</div>
+            <!-- The area of the chat textbox -->
+            <div class="write-message">
+               <img class="attach-icon" src="/images/attach-icon.jpg" width="20px" height="20px">
+               <input type="text" name="message-text">
+               <img class="emoji-icon" src="/images/emoji-icon.jpg" width="20px" height="20px">
+               <img class="send-icon" src="/images/send-icon.jpg" width="20px" height="20px">
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+   <br><br><br>
+   <!-- Footer of the Page -->
+   <footer>
+      <p>Challenges by El-Zero Academy</p>
+      <p>
+         Prepared by <span><a href="https://codepen.io/Enas_Hamdy" target="_blank">Enas Hamdy</a></span>
+      </p>
+      <a href="https://elzero.org/frontend-chat-messenger-with-background/" target="_blank">Frontend chat messenger with
+         background</a>
+   </footer>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+* {
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -o-box-sizing: border-box;
+}
+/* Adding an image as a background of the page */
+body {
+   margin: 0;
+   padding: 0;
+   background-color:cornsilk;
+   background-image: url("../images/chat-background3.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   font-size: 14px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+/* chat-app-container => The main chat app window */
+.chat-app-container {
+   width: 65%;
+   height: 50%;
+   margin: 50px auto;
+   background-color: white;
+   display: flex;
+}
+/* contacts-list class of the whole contacts list */
+.contacts-list {
+   border-right: 2px solid #d2d2d2;
+   width: 40%;
+   padding: 0 0 100px;
+}
+/* search-contact-box class of the search textbox in the contacts list.
+   It contains the search input box and the image of it.*/
+.search-contact-box {
+   padding: 25px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.search-contact-box input {
+   width: 80%;
+   padding: 15px;
+   background-color: #eceff1;
+   border: 2px solid #dddddd;
+   border-radius: 25px;
+   -webkit-border-radius: 25px;
+   -moz-border-radius: 25px;
+   -o-border-radius: 25px;
+}
+.search-contact-box img {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;;
+   -moz-border-radius: 50%;;
+   -o-border-radius: 50%;
+}
+/* contact-class of each contact alone */
+.contact-class {
+   padding: 10px 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: flex-start;
+   position: relative;
+}
+/* Adding a horizontal line above each contact data */
+.contact-class::before {
+   content: "";
+   position: absolute;
+   width: calc(100% - 40px);
+   border-top: 2px solid #d2d2d2;
+   top: 0;
+}
+/* Contact image */
+.contact-class .contact-image {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;;
+   -moz-border-radius: 50%;;
+   -o-border-radius: 50%;
+}
+/* contact-data class contains the contact details,
+   it contains contact-name and contact-last-msg */
+.contact-class .contact-data {
+   width: 50%;
+}
+.contact-class .contact-name {
+   font-weight: bold;
+}
+.contact-last-msg {
+   color: #afafaf;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+/* last-converse-time class of the last conversation time */
+.contact-class .last-converse-time {
+   width: 25%;
+   color: #afafaf;
+}
+/* clicked-contact class of the contact if it is clicked */
+.clicked-contact {
+   background-color: #00b0ff;
+   color:white;
+}
+
+.chat-room {
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+/* The address of the chat room  To:Contact name */
+.to-div {
+   padding: 20px;
+   background-color: #eceff1;
+   display: flex;
+   justify-content: flex-start;
+}
+/* to-name class => the name of the chosen contact */
+.to-name {
+   font-weight: bold;
+}
+/* The chat messages with a chosen contact */
+.messages-div {
+   height: 60%;
+   padding: 20px 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+}
+/* Adding chat day and time */
+.messages-div::before {
+   content: "Monday, 1:27 PM";
+   position: absolute;
+   width: calc(100% - 80px);
+   color: #c4b5ac;
+   text-align: center;
+   top: -10px;
+}
+/* Adding a horizontal line above the chat messages */
+.messages-div::after {
+   content: "";
+   position: absolute;
+   width: calc(100% - 80px);
+   border-top: 2px solid ;
+   border-image: linear-gradient(to right,
+         #d2d2d2 30%,
+         transparent 30%,
+         transparent 70%,
+         #d2d2d2 70%
+         ); 
+   border-image-slice: 1;
+   top: 0;
+}
+/* The messages area
+      contact-message class of the chosen contact
+      chat-owner class of the owner of the chat app */
+.contact-message {
+   padding: 10px;
+   background-color: #00b0ff;
+   color: white;
+   align-self: flex-start;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -o-border-radius: 5px;
+   position: relative;
+}
+/* Adding an Arrow shape before the contact-message class */
+.contact-message::before {
+   content:"";
+   position: absolute;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent #00b0ff transparent transparent;
+   left: -10px;
+   top: 50%;
+   margin-top: -5px;
+}
+.chat-owner {
+   padding: 10px;
+   background-color: rgb(224, 224, 224);
+   align-self: flex-end;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -o-border-radius: 5px;
+   position: relative;
+}
+/* Adding an Arrow shape after the chat-owner class  */
+.chat-owner::after {
+   content:"";
+   position: absolute;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent transparent transparent #eceff1;
+   right: -10px;
+   top: 50%;
+   margin-top: -5px;
+}
+/* The area of the chat textbox */
+.write-message {
+   padding: 10px;
+   background-color: #e6e6e6;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -o-border-radius: 5px;
+   display: flex;
+   justify-content: space-between;
+}
+.write-message input {
+   width: 80%;
+   border: none;
+   background-color: #e6e6e6;
+}
+
+/* Footer of the Page */
+/* footer => a , span */
+footer {
+   background-color: #76123c;
+   padding: 10px;
+   color: white;
+   border-top: 5px solid #ff83ad;
+   font-weight: bold;
+   font-family: 'Courier New', Courier, monospace;
+}
+footer a {
+   width: 100%;
+   /* display: inline-block; */
+   color: white;
+}
+footer a:hover {
+   color: #ffeb3b;
+}
